@@ -1,13 +1,66 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мое резюме</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="resume-container">
+    <header class="resume-header">
+      <h1 id="name" contenteditable="true">Иван Иванов</h1>
+      <h2 id="position" contenteditable="true">Frontend разработчик</h2>
+    </header>
+
+    <div class="resume-content">
+      <section class="resume-section">
+        <h3>Контактная информация</h3>
+        <ul>
+          <li><strong>Телефон:</strong> <span id="phone" contenteditable="true">+7 (123) 456-78-90</span></li>
+          <li><strong>Email:</strong> <span id="email" contenteditable="true">ivanov@example.com</span></li>
+          <li><strong>Город:</strong> <span id="city" contenteditable="true">Москва</span></li>
+        </ul>
+      </section>
+
+      <section class="resume-section">
+        <h3>Навыки</h3>
+        <ul id="skills" contenteditable="true">
+          <li>HTML, CSS, JavaScript</li>
+          <li>React, Vue.js</li>
+          <li>Git, Webpack</li>
+          <li>Адаптивная верстка</li>
+        </ul>
+      </section>
+
+      <section class="resume-section">
+        <h3>Опыт работы</h3>
+        <div id="experience" contenteditable="true">
+          <p><strong>Веб-студия "Айти"</strong> (2020-настоящее время)</p>
+          <p>Frontend разработчик</p>
+          <ul>
+            <li>Разработка SPA приложений</li>
+            <li>Оптимизация производительности</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section">
+        <h3>Образование</h3>
+        <div id="education" contenteditable="true">
+          <p><strong>МГТУ им. Баумана</strong> (2016-2020)</p>
+          <p>Компьютерные науки</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="resume-actions">
+      <button id="downloadBtn" class="ripple">Скачать PDF</button>
+      <button id="resetBtn" class="ripple">Сбросить изменения</button>
+    </div>
+  </div>
+
+  <script src="./js/counter.js" type="module"></script>
+  <script src="./js/main.js" type="module"></script>
+</body>
 </html>
